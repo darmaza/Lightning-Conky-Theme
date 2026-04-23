@@ -50,8 +50,18 @@ Ejecutar: Lanzá el entorno completo:
 ```
 
 ☕ Apoyá el Proyecto
+## ☕ Apoyá mi Trabajo
 
-Este tema fue creado con muchas horas de café y ajustes de píxeles. Si te sirve para tu flujo de trabajo o simplemente te gusta cómo se ve tu escritorio, ¡podés invitarme un cafecito! Tu apoyo me ayuda a seguir desarrollando herramientas y compartiendo conocimiento sobre Linux.
+Este tema de Conky es fruto de muchas horas de diseño y ajustes de píxeles. Si te gusta cómo quedó tu escritorio y querés apoyar mi camino como desarrollador de software libre, 
+**_¡podés invitarme un cafecito!_**
+
+Acepto donaciones locales (Argentina) e internacionales:
+
+| Argentina ($AR) | Internacional (U$S) |
+| :---: | :---: |
+| [![Invitame un Cafecito](https://img.shields.io/badge/Invitame%20un-Cafecito-FF813F?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://cafecito.app/masistica) | [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a-Coffee-FFdd00?style=for-the-badge&logo=ko-fi&logoColor=black)](https://ko-fi.com/masistica) |
+
+---
 
 📝 Notas del Desarrollador
 
