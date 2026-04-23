@@ -1,0 +1,28 @@
+conky.config = {
+    double_buffer = true,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+    -- Lo ponemos a la derecha, pero más abajo que la memoria
+    alignment = 'top_right',
+    gap_x = 50,
+    gap_y = 300, 
+    use_xft = true,
+    font = 'Ubuntu:bold:size=11',
+    update_interval = 1.0,
+    color0 = '39c9c4',
+    minimum_width = 250,
+    maximum_width = 250,
+};
+
+conky.text = [[
+${color0}PROCESADOR${color} ${hr 2}
+${voffset 5}${color0}Núcleo 1:${color} ${cpu cpu1}% ${cpubar cpu1 6}
+${voffset 5}${color0}Núcleo 2:${color} ${cpu cpu2}% ${cpubar cpu2 6}
+${voffset 10}${color0}Frecuencia:${color} ${freq_g} GHz
+${cpugraph cpu0 80,250 39c9c4 794e64}
+${color0}Temp. Procesador: ${color}${alignr}${hwmon 1 temp 1}°C
+]];

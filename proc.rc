@@ -1,0 +1,28 @@
+conky.config = {
+    double_buffer = true,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+    alignment = 'bottom_right',
+    gap_x = 50,
+    gap_y = 250,
+    use_xft = true,
+    font = 'Ubuntu:bold:size=9',
+    update_interval = 1.5,
+    color0 = '39c9c4',
+    default_color = 'FFFFFF',
+    minimum_width = 250,
+    maximum_width = 250,
+};
+conky.text = [[
+${voffset 20}${color0}${font Roboto:size=10}PROCESOS TOP${font} ${hr 2}
+${color0}Nombre${goto 130}CPU%${alignr}MEM%
+${color}${top name 1}${goto 130}${top cpu 1}${alignr}${top mem 1}
+${color}${top name 2}${goto 130}${top cpu 2}${alignr}${top mem 2}
+${color}${top name 3}${goto 130}${top cpu 3}${alignr}${top mem 3}
+${color}${top name 4}${goto 130}${top cpu 4}${alignr}${top mem 4}
+
+]];

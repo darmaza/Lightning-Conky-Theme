@@ -1,0 +1,29 @@
+conky.config = {
+    double_buffer = true,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+    alignment = 'bottom_right',
+    gap_x = 50,
+    gap_y = 50,
+    use_xft = true,
+    font = 'Ubuntu:bold:size=9',
+    update_interval = 30.0,
+    color0 = '39c9c4',
+    default_color = 'FFFFFF',
+    minimum_width = 250,
+    maximum_width = 250,
+};
+
+conky.text = [[
+${color0}${font Orbitron:size=11}ALMACENAMIENTO${font}${hr 2}
+${color0}Disco SSD:${color} ${fs_used /} / ${fs_size /} ${alignr}${fs_used_perc /}%
+${fs_bar 6 /}
+${color0}Lectura:${color} ${diskio_read} ${alignr}
+${color0}Escritura:${color} ${diskio_write}
+${diskiograph 50,250 39c9c4 794e64}
+
+]];

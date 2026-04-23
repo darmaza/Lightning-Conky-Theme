@@ -1,0 +1,28 @@
+conky.config = {
+    double_buffer = true,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+    alignment = 'top_right',
+    gap_x = 50,
+    gap_y = 150,
+    use_xft = true,
+    font = 'Ubuntu:bold:size=11',
+    update_interval = 1.0,
+    color0 = '39c9c4',
+    default_color = 'FFFFFF',
+    minimum_width = 250,
+    maximum_width = 250,
+};
+
+conky.text = [[
+${color0}ESTADO DE MEMORIA${color}
+${hr}
+${color0}RAM:${color} $mem / $memmax $memperc%
+${membar 4}
+${color0}SWAP:${color} $swap / $swapmax $swapperc%
+${swapbar 4}
+]];

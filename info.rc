@@ -1,0 +1,42 @@
+conky.config = {
+    double_buffer = true,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
+    alignment = 'top_left',
+    gap_x = 30,
+    gap_y = 60,
+    use_xft = true,
+    font = 'Ubuntu:size=10',
+    color0 = '39c9c4',
+    update_interval = 2.0,
+    minimum_width = 250,
+    maximum_width = 250,
+};
+
+conky.text = [[
+${color0}${font Roboto:size=14}SISTEMA${font}${hr 2}
+${color0}OS:${goto 100}${color} ${execi 65000 lsb_release -ds}
+${color0}Kernel:${goto 100}${color} $kernel
+${color0}Uptime:${goto 100}${color} $uptime
+${voffset 30}${color0}${font Roboto:size=14}RED (Wi-Fi) ${font}${hr 2}
+${color0}Señal:${goto 100}${color} ${wireless_link_qual_perc wlx58b3fca38736}% ${wireless_link_bar 6 wlx58b3fca38736}
+${color0}Subida:${goto 100}${color} ${upspeed wlx58b3fca38736}${alignr}
+${color0}Bajada:${goto 100}${color} ${downspeed wlx58b3fca38736}${alignr}
+${upspeedgraph wlx58b3fca38736 30,100 39c9c4 794e64}${alignr}${downspeedgraph wlx58b3fca38736 30,100 39c9c4 794e64}
+${voffset 10}${color0}${font Roboto:size=14}FECHA Y HORA ${font}${hr 2}
+${alignc}${font Roboto:size=55}${time %H:%M}${font}
+${alignc}${time %A, %d %B %Y}
+${voffset 25}${color0}${font Roboto:size=10}CLIMA SANTA ROSA${font} ${hr 2}
+${color0}Estado:${goto 150}${alignr}${color} ${execi 1800 curl -s "wttr.in/RSA?format=%C" | trans -b -s en -t es}
+${color0}Temperatura:${goto 150}${alignr}${color} ${execi 1800 curl -s "wttr.in/RSA?format=%t"}
+${color0}Viento:${goto 150}${alignr}${color} ${execi 1800 curl -s "wttr.in/RSA?format=%w" | sed 's/[^0-9a-zA-Z/h ]//g'} ${alignr}
+${color0}Humedad:${goto 150}${alignr}${color} ${execi 1800 curl -s "wttr.in/RSA?format=%h"}
+${color0}Lluvia:${goto 150}${alignr}${color} ${execi 1800 curl -s "wttr.in/RSA?format=%p"}
+${color0}Luna:${goto 150}${alignr}${color} ${execi 1800 curl -s "wttr.in/RSA?format=%M" | sed 's/1/Nueva/g; s/2/Creciente/g; s/3/Cuarto Crec./g; s/4/Gibosa Crec./g; s/5/Llena/g; s/6/Gibosa Meng./g; s/7/Cuarto Meng./g; s/8/Menguante/g'}
+${color0}${goto 100}${font DejaVu Sans:size=18}${execi 1800 curl -s "wttr.in/RSA?format=%m"}
+
+]];

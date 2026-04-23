@@ -1,0 +1,42 @@
+conky.config = {
+    double_buffer = true,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,skip_taskbar,skip_pager,sticky',
+    use_xft = true,
+    font = 'Ubuntu:bold:size=11',
+    update_interval = 60.0,
+    color0 = '39c9c4',
+    default_color = 'FFFFFF',
+    alignment = 'bottom_left',
+    gap_x = 30,
+    gap_y = 50,
+    minimum_width = 250,
+    maximum_width = 250,
+};
+
+conky.text = [[
+${color0}${font Roboto:size=11}GLOSARIO PYTHON${font}${hr 2}
+${color0}def${goto 100}${color} ${alignr}Define una función
+${color0}int${goto 80}${color} ${alignr}Número entero
+${color0}float${goto 80}${color} ${alignr}Número con decimales
+${color0}str${goto 80}${color} ${alignr}Cadena de texto
+${color0}bool${goto 80}${color} ${alignr}Lógica (True/False)
+${color0}list${goto 80}${color} ${alignr}Colección de datos
+${color0}if/else${goto 80}${color} ${alignr}Condicionales
+${color0}for/while${goto 80}${color} ${alignr}Bucles (Ciclos)
+${color0}print()${goto 80}${color} ${alignr}Muestra en pantalla
+${color0}input()${goto 80}${color} ${alignr}Pide dato al usuario
+${hr}
+${color0}Métodos Útiles:${color}
+${color0}.append()${goto 80}${color} ${alignr}Agregar a lista
+${color0}.split()${goto 80}${color} ${alignr}Dividir texto
+${color0}len()${goto 80}${color} ${alignr}Contar elementos
+${color0}range()${goto 80}${color} ${alignr}Generar secuencia
+${hr}
+${color0}${font Roboto:size=8:black}ESTUDIANDO ONLINE EN LA U.N.C.
+
+]];
